@@ -1,1 +1,6 @@
-https://www.figma.com/design/X2p2xZ6PxsBf77vNRQDkDH/Untitled?node-id=17-4&t=KPdkSv8ITLGNdcH6-1
+Link chia sẻ thiết kế Figma (chế độ xem):
+https://www.figma.com/file/thay-bang-link-figma-cua-ban
+
+Ghi chú: Thay đường link trên bằng link Figma thật (đặt quyền xem "Anyone with the link can view")
+trước khi nộp bài. Có thể chụp ảnh màn hình các frame thiết kế và lưu trong thư mục này (định dạng
+.png hoặc .jpg) để nộp kèm nếu giảng viên yêu cầu ảnh thay vì link.
