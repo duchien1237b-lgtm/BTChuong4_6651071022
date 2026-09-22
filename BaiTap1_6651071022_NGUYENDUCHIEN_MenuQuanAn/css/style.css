@@ -1,11 +1,3 @@
-/* ==========================================================================
-   THAN HỒNG — QUÁN NƯỚNG THAN HOA
-   Bảng màu:  #1B1614 than đen | #E85D2C ember cam | #B23A24 ember đỏ
-              #D4A843 vàng đồng | #F5EDE3 kem sáng
-   Font chữ:  Playfair Display (tiêu đề) + Be Vietnam Pro (nội dung)
-   ========================================================================== */
-
-/* [1] UNIVERSAL SELECTOR (*) — reset mặc định cho mọi phần tử */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +17,6 @@
   --shadow-card: 0 18px 34px rgba(20, 12, 8, 0.18);
 }
 
-/* [2] TAG / TYPE SELECTOR — áp dụng cho mọi thẻ html, body */
 html {
   scroll-behavior: smooth;
 }
@@ -37,7 +28,6 @@ body {
   line-height: 1.6;
 }
 
-/* [3] GROUP SELECTOR (,) — các thẻ tiêu đề dùng chung font hiển thị */
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
   color: var(--charcoal);
@@ -58,14 +48,10 @@ ul {
   list-style: none;
 }
 
-/* ==========================================================================
-   HEADER / BANNER
-   Yêu cầu 12: background-size + background-position cho ảnh nền banner
-   ========================================================================== */
 #site-header {
   background-image: url('../images/hero-texture.svg');
-  background-size: cover;              /* background-size */
-  background-position: center bottom;  /* background-position */
+  background-size: cover;           
+  background-position: center bottom; 
   background-repeat: no-repeat;
   background-color: var(--charcoal);
   color: var(--cream);
@@ -123,7 +109,6 @@ ul {
   flex-wrap: wrap;
 }
 
-/* [4] DESCENDANT SELECTOR — thẻ a nằm bên trong nav */
 #main-nav a {
   font-weight: 600;
   font-size: 0.98rem;
@@ -132,12 +117,10 @@ ul {
   padding-bottom: 4px;
 }
 
-/* [5] PSEUDO-CLASS :hover — hiệu ứng khi rê chuột vào mục menu */
 #main-nav ul li a:hover {
   color: var(--ember);
 }
 
-/* [6] PSEUDO-ELEMENT ::after — vạch gạch chân xuất hiện khi hover */
 #main-nav ul li a::after {
   content: "";
   position: absolute;
@@ -168,9 +151,6 @@ ul {
   box-shadow: 0 14px 28px rgba(232, 93, 44, 0.45);
 }
 
-/* ==========================================================================
-   LAYOUT: NỘI DUNG CHÍNH + ASIDE
-   ========================================================================== */
 .content-wrap {
   max-width: 1180px;
   margin: 0 auto;
@@ -193,7 +173,6 @@ ul {
   margin-bottom: 6px;
 }
 
-/* [7] ID SELECTOR — section khai vị định danh riêng để làm mốc cuộn trang */
 #khai-vi {
   scroll-margin-top: 30px;
 }
@@ -202,21 +181,18 @@ ul {
   margin-bottom: 58px;
 }
 
-/* [8] CHILD COMBINATOR (>) — chỉ áp dụng cho h2 là con trực tiếp của .menu-section */
 .menu-section > h2 {
   font-size: clamp(1.7rem, 3vw, 2.3rem);
   display: inline-block;
   padding: 2px 6px;
-  /* Yêu cầu 12: background-origin + background-clip cho khối tiêu đề section */
   background-image: linear-gradient(100deg, var(--ember) 0%, var(--gold) 45%, var(--ember-deep) 100%);
-  background-origin: padding-box;   /* background-origin */
-  background-clip: text;            /* background-clip */
+  background-origin: padding-box;  
+  background-clip: text;            
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
-/* [9] ADJACENT SIBLING SELECTOR (+) — đoạn mô tả ngay sau tiêu đề h2 */
 .menu-section > h2 + .section-desc {
   margin-top: 10px;
   color: #6B5C4E;
@@ -229,13 +205,11 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 20px;
 }
-
-/* [10] CLASS SELECTOR — thẻ card món ăn */
 .dish-card {
   position: relative;
   background: var(--cream-2);
-  border-radius: var(--radius-card);   /* Yêu cầu 10: border-radius */
-  box-shadow: var(--shadow-card);      /* Yêu cầu 10: box-shadow */
+  border-radius: var(--radius-card);  
+  box-shadow: var(--shadow-card);      
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -251,7 +225,7 @@ ul {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: var(--radius-card) var(--radius-card) 0 0; /* bo góc riêng cho ảnh */
+  border-radius: var(--radius-card) var(--radius-card) 0 0; 
 }
 
 .dish-card h3 {
@@ -297,7 +271,6 @@ ul {
   transform: scale(1.05);
 }
 
-/* Card nổi bật: món bán chạy */
 .dish-card.featured {
   border: 2px solid var(--gold);
 }
@@ -316,14 +289,10 @@ ul {
   letter-spacing: 0.3px;
 }
 
-/* [11] PSEUDO-CLASS :first-child — thẻ card đầu tiên trong mỗi lưới món hơi nhấn nhá */
 .dish-grid > .dish-card:first-child h3 {
   color: var(--ember-deep);
 }
 
-/* ==========================================================================
-   ASIDE
-   ========================================================================== */
 .sidebar {
   position: sticky;
   top: 24px;
@@ -376,7 +345,6 @@ ul {
   font-weight: 700;
 }
 
-/* Yêu cầu 11: border-image cho khối khuyến mãi */
 .promo-box {
   background: linear-gradient(160deg, var(--charcoal), var(--charcoal-2));
   color: var(--cream-2);
@@ -408,10 +376,6 @@ ul {
   color: var(--muted);
 }
 
-/* ==========================================================================
-   FOOTER
-   Yêu cầu 12: multiple background images (hoạ tiết + màu nền)
-   ========================================================================== */
 footer {
   margin-top: 40px;
   background-image: url('../images/footer-pattern.svg'), linear-gradient(180deg, var(--charcoal-2), var(--charcoal));
@@ -475,9 +439,6 @@ footer {
   padding-top: 20px;
 }
 
-/* ==========================================================================
-   RESPONSIVE
-   ========================================================================== */
 @media (max-width: 880px) {
   .content-wrap {
     grid-template-columns: 1fr;
